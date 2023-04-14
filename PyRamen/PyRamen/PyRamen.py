@@ -6,16 +6,21 @@ import csv
 from pathlib import Path
 
 # @TODO: Set file paths for menu_data.csv and sales_data.csv
-menu_filepath = Path('')
-sales_filepath = Path('')
+menu_filepath = Path('PyRamen/Resources/menu_data.csv')
+sales_filepath = Path('PyRamen/Resources/menu_data.csv')
 
 # @TODO: Initialize list objects to hold our menu and sales data
 menu = []
 sales = []
-
+menu_num += 0
 # @TODO: Read in the menu data into the menu list
 
-
+with open(menu_filepath, 'r') as csvfile:
+    
+    menureader = csv.reader(menu_filepath, delimiter=',')
+    
+    header = next(menureader)
+    menu_num += 1
 
 
 
